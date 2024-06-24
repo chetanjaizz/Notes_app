@@ -52,7 +52,7 @@ const TaskInput = () => {
 
   return (
     <>
-      <InputGroup className="mb-3">
+      <InputGroup className="mb-4">
         <FormControl
           placeholder="Enter a task"
           value={task}
@@ -60,7 +60,7 @@ const TaskInput = () => {
           onKeyPress={(e) => e.key === 'Enter' && handleAddTask()}
         />
       </InputGroup>
-      <InputGroup className="mb-3">
+      <InputGroup className="mb-4">
         <FormControl
           type="date"
           value={date}

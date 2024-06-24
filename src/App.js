@@ -8,10 +8,10 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const App = () => {
   return (
-    <Container>
+    <Container >
       <Row className="justify-content-md-center">
         <Col md="auto">
-          <h1>To-Do List</h1>
+          <h1 style={{padding : "50px" , fontWeight : "bolder"}}>To-Do List</h1>
           <TaskInput />
           <TaskList />
         </Col>

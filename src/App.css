@@ -13,8 +13,17 @@ button {
   padding: 5px;
   margin-left: 5px;
 }
-body{
-  /* border: black; */
 
-  background-color: rgb(61, 161, 185);
+
+
+body {
+  background-image: url('./../public/bg.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative; /* Ensure the body is positioned relative for absolute positioning */
+  background-color: rgba(255, 255, 255, 0.5); /* Half-transparent white background */
 }
