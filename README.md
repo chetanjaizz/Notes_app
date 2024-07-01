@@ -1,6 +1,6 @@
-# To-Do Application
+# Notes Application
 
-This is a simple To-Do application built with React, Redux, and Bootstrap. The application allows users to manage tasks with associated dates.
+This is a simple Notes application built with React, Redux, and Bootstrap. The application allows users to manage notes with associated dates.
 
 ## Features
 
