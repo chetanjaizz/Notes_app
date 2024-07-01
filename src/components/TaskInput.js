@@ -1,43 +1,16 @@
-// src/components/TaskInput.js
-// import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { addTask } from '../redux/actions';
-// import { Button, InputGroup, FormControl } from 'react-bootstrap';
 
-// const TaskInput = () => {
-//   const [task, setTask] = useState('');
-//   const dispatch = useDispatch();
-
-//   const handleAddTask = () => {
-//     if (task.trim()) {
-//       dispatch(addTask(task));
-//       setTask('');
-//     }
-//   };
-
-//   return (
-//     <InputGroup className="mb-3">
-//       <FormControl
-//         placeholder="Enter a task"
-//         value={task}
-//         onChange={(e) => setTask(e.target.value)}
-//         onKeyPress={(e) => e.key === 'Enter' && handleAddTask()}
-//       />
-//       <Button variant="primary" onClick={handleAddTask}>
-//         Add Task
-//       </Button>
-//     </InputGroup>
-//   );
-// };
-
-// export default TaskInput;
 
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTask } from '../redux/actions';
 import { Button, InputGroup, FormControl, Form } from 'react-bootstrap';
 
+
+
 const TaskInput = () => {
+
+  
+
   const [task, setTask] = useState('');
   const [date, setDate] = useState('');
   const dispatch = useDispatch();
@@ -49,12 +22,17 @@ const TaskInput = () => {
       setDate('');
     }
   };
-
+  const ExampleButton = () => {
+    const handleClick = () => {
+      alert('Button clicked!');
+    }
+  };
   return (
     <>
       <InputGroup className="mb-4">
         <FormControl
-          placeholder="Enter a task"
+          style={{height : "80px"}}
+          placeholder="Make your note"
           value={task}
           onChange={(e) => setTask(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && handleAddTask()}
@@ -67,7 +45,7 @@ const TaskInput = () => {
           onChange={(e) => setDate(e.target.value)}
         />
         <Button variant="primary" onClick={handleAddTask}>
-          Add Task
+          Add Note
         </Button>
       </InputGroup>
     </>

@@ -1,12 +1,11 @@
-// src/components/TaskList.js
+// src/components/TaskListPage.js
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTask, editTask, toggleCompleteTask } from '../redux/actions';
 import { ListGroup, Button, ButtonGroup } from 'react-bootstrap';
-import { toast } from 'react-toastify';
 
-const TaskList = () => {
+const TaskListPage = () => {
   const tasks = useSelector((state) => state.tasks);
   const dispatch = useDispatch();
 
@@ -18,10 +17,6 @@ const TaskList = () => {
     }
   };
 
-  useEffect(() => {
-    toast.success('Task added successfully!');
-  }, [tasks]); // Trigger toast when tasks change
-
   return (
     <ListGroup>
       {tasks.map((task) => (
@@ -29,9 +24,10 @@ const TaskList = () => {
           key={task.id}
           className={`d-flex justify-content-between align-items-center ${
             task.completed ? 'bg-success text-white' : ''
-          }`}
+          }`
+        }
         >
-          <div>
+          <div >
             <span
               onClick={() => dispatch(toggleCompleteTask(task.id))}
               style={{ cursor: 'pointer' }}
@@ -55,4 +51,4 @@ const TaskList = () => {
   );
 };
 
-export default TaskList;
+export default TaskListPage;
